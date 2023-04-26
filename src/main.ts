@@ -11,10 +11,12 @@ async function bootstrap() {
   
   const configService = app.get(ConfigService)
 
+  //cors seteado en /constants/cors.ts
   app.enableCors(CORS);
   
   console.log(configService.get('PORT'))
   
+  //prefijo para que las url tengan /api/ antes de la ruta
   app.setGlobalPrefix('api')
   
   await app.listen(configService.get('PORT'));

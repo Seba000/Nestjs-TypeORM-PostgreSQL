@@ -10,6 +10,8 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
     UsersModule
+
   ]
 })
+
 export class AppModule {}
