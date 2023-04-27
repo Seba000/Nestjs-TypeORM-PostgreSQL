@@ -16,6 +16,7 @@ async function bootstrap() {
   
   console.log(configService.get('PORT'))
   
+  
   //prefijo para que las url tengan /api/ antes de la ruta
   app.setGlobalPrefix('api')
   

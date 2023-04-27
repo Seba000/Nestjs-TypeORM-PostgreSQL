@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  seba_pg:
+    image: postgres:15.2
+    container_name: seba_pg
+    restart: always
+    environment:
+      POSTGRES_DB: sebadb
+      POSTGRES_USER: seba
+      POSTGRES_PASSWORD: seba123
+    volumes:
+      - .db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5432:5432
